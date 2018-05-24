@@ -27,13 +27,14 @@ file.exists = function(filepath) {
 
 // 提取 /* public Dom__setHtml */
 function findKeyword(str) {
-    var reg = '/\\* +(?:public|exported) +([^ ]*?) +\\*/';
+    var reg = '(?:/\\* +(?:public|exported) +([^ ]*?) +\\*/|export +function +([^ ]+))';
     var names = str.match(new RegExp(reg, 'g'));
     if (!names) {
         return [];
     }
     return names.map(function(name) {
-        return name.match(new RegExp(reg))[1];
+        var match = name.match(new RegExp(reg));
+        return match[1] || match[2];
     });
 }
 

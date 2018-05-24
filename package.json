@@ -1,11 +1,11 @@
 {
-  "name": "eslint-plugin-viper",
-  "version": "1.1.2",
+  "name": "eslint-plugin-viper-v2",
+  "version": "1.1.5",
   "description": "An ESLint plugin to extract and lint viper scripts.",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cxdongjack/eslint-plugin-viper"
+    "url": "https://github.com/Nigiss/eslint-plugin-viper"
   },
   "keywords": [
     "eslint-plugin",
