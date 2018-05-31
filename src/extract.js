@@ -27,7 +27,7 @@ file.exists = function(filepath) {
 
 // 提取 /* public Dom__setHtml */
 function findKeyword(str) {
-    var reg = '(?:/\\* +(?:public|exported) +([^ ]*?) +\\*/|export +function +(\\w+))';
+    var reg = '(?:/\\* +(?:public|exported) +([^ ]*?) +\\*/|export +(?:function|const) +(\\w+))';
     var names = str.match(new RegExp(reg, 'g'));
     if (!names) {
         return [];
